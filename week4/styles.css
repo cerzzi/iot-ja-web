@@ -1,0 +1,24 @@
+.center {
+    text-align: center;
+  }
+
+body {
+    background-color: black;
+    padding: 10px;
+    border: 1px;
+  }
+  
+  h1 {
+    color: darkgray;
+    margin-left: 20px;
+    font-style: italic;
+    font: 40px;
+    font-family: sans-serif;
+    padding: 20px;
+    
+  }
+
+  .pclassit{
+    color: blanchedalmond;
+    font-style: italic;
+}
