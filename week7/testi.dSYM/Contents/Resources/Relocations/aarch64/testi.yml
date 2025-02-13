@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/cerz/Documents/gitrepos/iot-ja-web/week7/testi'
+relocations:     []
+...

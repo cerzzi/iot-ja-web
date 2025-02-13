@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/cerz/Documents/gitrepos/iot-ja-web/week7",
+      "program": "/Users/cerz/Documents/gitrepos/iot-ja-web/week7/build/Debug/outDebug"
+    }
+  ]
+}
