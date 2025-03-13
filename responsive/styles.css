@@ -1,0 +1,24 @@
+
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    body {
+        background-color: black;
+        font-size: 16px;
+        color: bisque;
+    }
+}
+
+
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    body {
+        background-color: beige;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1000px){
+    body {
+        background-color: cornflowerblue;
+      font-size: 16px;
+    }
+  }

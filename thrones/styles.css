@@ -1,0 +1,195 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2E3440; /* Nord Polar Night 0 */
+    margin: 0;
+    padding: 0;
+    color: #D8DEE9; /* Nord Snow Storm 1 */
+}
+
+header {
+    background-color: #3B4252; /* Nord Polar Night 1 */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #ECEFF4; /* Nord Snow Storm 3 */
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+.search-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #434C5E; /* Nord Polar Night 2 */
+    border-radius: 4px;
+    background-color: #434C5E; /* Nord Polar Night 2 */
+    color: #ECEFF4; /* Nord Snow Storm 3 */
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    border-color: #81A1C1; /* Nord Frost 1 */
+}
+
+#search-input::placeholder {
+    color: #A3BE8C; /* Nord Aurora Green */
+}
+
+.container {
+    max-width: 800px; /* Limit width for readability */
+    margin: 20px auto; /* Center the container */
+    padding: 0 20px;
+}
+
+.character-nav {
+    background-color: #3B4252; /* Nord Polar Night 1 */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.character-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.character-nav li {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #434C5E; /* Nord Polar Night 2 */
+    transition: background-color 0.3s, padding-left 0.2s;
+    color: #D8DEE9; /* Nord Snow Storm 1 */
+}
+
+.character-nav li img {
+    width: 40px; /* Small scaled image */
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid #434C5E; /* Nord Polar Night 2 */
+}
+
+.character-nav li:hover {
+    background-color: #434C5E; /* Nord Polar Night 2 */
+    padding-left: 16px;
+}
+
+.character-nav li.active {
+    background-color: #5E81AC; /* Nord Frost 2 */
+    color: #ECEFF4; /* Nord Snow Storm 3 */
+    font-weight: bold;
+}
+
+.character-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 52, 64, 0.8); /* Nord Polar Night 0 with opacity */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.character-modal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.character-details {
+    position: relative;
+    background-color: #3B4252; /* Nord Polar Night 1 */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    color: #D8DEE9; /* Nord Snow Storm 1 */
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.character-modal.active .character-details {
+    transform: scale(1);
+}
+
+.character-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #434C5E; /* Nord Polar Night 2 */
+}
+
+.character-details p {
+    margin: 10px 0;
+    color: #D8DEE9; /* Nord Snow Storm 1 */
+    line-height: 1.6;
+}
+
+.character-details p strong {
+    font-weight: bold;
+    color: #ECEFF4; /* Nord Snow Storm 3 */
+}
+
+.character-details a {
+    color: #81A1C1; /* Nord Frost 1 */
+    text-decoration: none;
+}
+
+.character-details a:hover {
+    text-decoration: underline;
+    color: #88C0D0; /* Nord Frost 0 */
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #BF616A; /* Nord Aurora Red */
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #ECEFF4; /* Nord Snow Storm 3 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-modal:hover {
+    background: #D08770; /* Nord Aurora Orange */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}
