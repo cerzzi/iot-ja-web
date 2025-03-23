@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f5f7fa; /* Light grayish-white for a clean base */
+    color: #333; /* Darker text for readability */
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #1a73e8; /* Professional blue */
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.weather-card, .forecast-card {
+    background: #ffffff; /* White cards for clarity */
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid #e0e0e0; /* Light border */
+    transition: box-shadow 0.3s ease;
+}
+
+.weather-card:hover, .forecast-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Slight lift on hover */
+}
+
+.weather-card h2, .forecast-card h3 {
+    color: #1a73e8; /* Blue for headings */
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.weather-card p, .forecast-card p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    color: #555; /* Softer gray for text */
+}
+
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* More spacing for professionalism */
+}
+
+.forecast-card {
+    flex: 1 1 220px; /* Slightly wider cards */
+    max-width: 260px;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon i {
+    font-size: 50px; /* Slightly smaller for balance */
+    color: #1a73e8; /* Blue to match theme */
+}
+
+/* Add a subtle header underline */
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #1a73e8;
+    margin: 10px auto 0;
+}
