@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampere Weather Forecast</title>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tampere Weather Forecast</h1>
+    </header>
+    <main>
+        <!-- Current Weather Section -->
+        <section id="current-weather">
+            <h2>Current Weather</h2>
+            <div id="weather-details">
+                <p id="temperature">Loading...</p>
+                <p id="description"></p>
+                <img id="weather-icon" src="" alt="Weather Icon">
+            </div>
+        </section>
+
+        <!-- 5-Day Forecast Chart Section -->
+        <section id="forecast">
+            <h2>5-Day Forecast</h2>
+            <div id="chart-container">
+                <canvas id="weatherChart"></canvas>
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

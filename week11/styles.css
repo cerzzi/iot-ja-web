@@ -1,0 +1,192 @@
+/* Nord Theme Colors */
+:root {
+    --nord0: #2e3440;  /* Dark background */
+    --nord1: #3b4252;  /* Slightly lighter background */
+    --nord3: #4c566a;  /* Mid-tone gray */
+    --nord4: #d8dee9;  /* Light gray */
+    --nord6: #eceff4;  /* Off-white */
+    --nord10: #5e81ac; /* Blue accent */
+    --nord13: #ebcb8b; /* Yellow accent for hover */
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--nord0);
+    color: var(--nord6);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--nord1);
+    color: var(--nord6);
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--nord10);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* Main Layout */
+main {
+    max-width: 1200px; /* Increased for widescreen */
+    margin: 20px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Current Weather Section */
+#current-weather {
+    background-color: var(--nord1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+#current-weather:hover {
+    transform: translateY(-2px);
+}
+
+#current-weather h2 {
+    color: var(--nord4);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#weather-details {
+    margin-top: 10px;
+}
+
+#weather-details p {
+    font-size: 1.2rem;
+    color: var(--nord6);
+    margin: 5px 0;
+}
+
+#weather-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+#weather-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Forecast Section */
+#forecast {
+    background-color: var(--nord1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+#forecast:hover {
+    transform: translateY(-2px);
+}
+
+#forecast h2 {
+    color: var(--nord4);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#chart-container {
+    max-width: 100%;
+    margin-top: 20px;
+    background-color: var(--nord0);
+    padding: 15px;
+    border-radius: 4px;
+    position: relative;
+    height: 400px; /* Default height for better widescreen scaling */
+}
+
+/* Widescreen Adjustments */
+@media (min-width: 1200px) {
+    main {
+        padding: 0 30px;
+    }
+
+    #chart-container {
+        height: 500px; /* Taller chart on widescreen */
+    }
+
+    #current-weather, #forecast {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #current-weather, #forecast {
+        padding: 15px;
+    }
+
+    #weather-details p {
+        font-size: 1rem;
+    }
+
+    #weather-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    #chart-container {
+        height: 300px; /* Smaller height for tablets */
+    }
+
+    #forecast h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    #current-weather, #forecast {
+        padding: 10px;
+    }
+
+    #weather-details p {
+        font-size: 0.9rem;
+    }
+
+    #weather-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    #chart-container {
+        height: 250px; /* Compact height for small screens */
+        padding: 10px;
+    }
+
+    #forecast h2 {
+        font-size: 1.1rem;
+    }
+}
