@@ -1,0 +1,149 @@
+/* Nord Theme Palette */
+:root {
+    --nord0: #2E3440;  /* Dark Gray (Background) */
+    --nord1: #3B4252;  /* Darker Gray (Borders, Shadows) */
+    --nord2: #434C5E;  /* Medium Gray */
+    --nord3: #4C566A;  /* Light Gray (Subtle elements) */
+    --nord4: #D8DEE9;  /* Very Light Gray (Text, Backgrounds) */
+    --nord5: #E5E9F0;  /* Off-White */
+    --nord6: #ECEFF4;  /* White (Main Background) */
+    --nord7: #8FBCBB;  /* Frost Cyan (Accents) */
+    --nord8: #88C0D0;  /* Frost Light Blue (Hover, Highlights) */
+    --nord9: #81A1C1;  /* Frost Blue (Primary) */
+    --nord10: #5E81AC; /* Frost Dark Blue (Active) */
+    --nord11: #BF616A; /* Aurora Red (Errors) */
+    --nord13: #EBCB8B; /* Aurora Yellow (Warnings) */
+    --nord14: #A3BE8C; /* Aurora Green (Success) */
+  }
+  
+  /* Reset and Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background-color: var(--nord6);
+    color: var(--nord0);
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Heading */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--nord10);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  /* Table Styles */
+  #cities-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--nord4);
+    box-shadow: 0 4px 6px rgba(46, 52, 64, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Table Header */
+  #cities-table thead th {
+    background-color: var(--nord9);
+    color: var(--nord6);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--nord1);
+  }
+  
+  /* Table Cells */
+  #cities-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--nord3);
+    color: var(--nord0);
+  }
+  
+  /* Alternating Row Colors */
+  #cities-table tbody tr:nth-child(even) {
+    background-color: var(--nord5);
+  }
+  
+  /* Hover Effect */
+  #cities-table tbody tr:hover {
+    background-color: var(--nord8);
+    color: var(--nord0);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Column-Specific Styles */
+  .column-id {
+    font-weight: 500;
+    color: var(--nord10);
+    width: 15%;
+  }
+  
+  .column-name {
+    font-weight: 500;
+    width: 40%;
+  }
+  
+  .column-country {
+    width: 45%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    #cities-table thead th,
+    #cities-table td {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+    }
+  
+    .column-id,
+    .column-name,
+    .column-country {
+      width: auto; /* Stack columns on small screens */
+    }
+  }
+
+  #add-city-form {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#add-city-form input {
+  padding: 8px;
+  border: 1px solid var(--nord3);
+  border-radius: 4px;
+  background-color: var(--nord5);
+  color: var(--nord0);
+  flex: 1;
+}
+
+#add-city-form button {
+  padding: 8px 16px;
+  background-color: var(--nord9);
+  color: var(--nord6);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-city-form button:hover {
+  background-color: var(--nord10);
+}

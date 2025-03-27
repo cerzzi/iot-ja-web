@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cities List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>CITIES LIST</h1>
+        
+        <!-- Form to add a new city -->
+        <form id="add-city-form">
+            <input type="text" id="city-input" placeholder="City" required>
+            <input type="text" id="country-input" placeholder="Country" required>
+            <button type="submit">Add City</button>
+        </form>
+
+        <table id="cities-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>City</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added dynamically by scripts.js -->
+            </tbody>
+        </table>
+        
+        <script src="scripts.js" async defer></script>
+    </body>
+</html>
