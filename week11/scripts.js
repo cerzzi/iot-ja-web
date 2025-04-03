@@ -1,5 +1,5 @@
 // OpenWeather API settings
-const API_KEY = 'aa6080f0b3d3f2ad02640aa9af989b64'; // Replace with your OpenWeather API key
+const API_KEY = 'API'; // Replace with your OpenWeather API key
 const CITY = 'Tampere,FI';
 const CURRENT_WEATHER_URL = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`;
 const FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&appid=${API_KEY}&units=metric`;
