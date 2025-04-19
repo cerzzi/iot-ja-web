@@ -1,0 +1,191 @@
+/* Nord Theme Colors - Refined for better contrast and professionalism */
+:root {
+    --nord0: #2E3440;  /* Primary background */
+    --nord1: #3B4252;  /* Secondary background */
+    --nord2: #434C5E;  /* Tertiary background */
+    --nord3: #4C566A;  /* Subtle borders and accents */
+    --nord4: #D8DEE9;  /* Primary text */
+    --nord5: #E5E9F0;  /* Secondary text (headings) */
+    --nord6: #ECEFF4;  /* White for highlights */
+    --nord7: #8FBCBB;  /* Frost: subtle accent */
+    --nord8: #88C0D0;  /* Frost: primary accent (buttons, charts) */
+    --nord9: #81A1C1;  /* Frost: secondary accent (hover) */
+    --nord10: #5E81AC; /* Frost: darker accent */
+}
+
+body {
+    background-color: var(--nord0);
+    color: var(--nord4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#weatherData {
+    background: var(--nord1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    background: var(--nord1);
+    border-radius: 4px;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid var(--nord3);
+}
+
+.nav-tabs .nav-link {
+    color: var(--nord4);
+    background: var(--nord2);
+    border: 1px solid var(--nord3);
+    border-bottom: none;
+    margin-right: 4px;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: var(--nord8);
+    color: var(--nord0);
+    border-color: var(--nord8) var(--nord8) transparent;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: var(--nord9);
+    color: var(--nord0);
+    border-color: var(--nord9);
+}
+
+.btn-primary {
+    background-color: var(--nord8);
+    border-color: var(--nord8);
+    color: var(--nord0);
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--nord9);
+    border-color: var(--nord9);
+}
+
+.table {
+    background: var(--nord2);
+    color: var(--nord4);
+    font-size: 14px;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: var(--nord3);
+}
+
+.table-bordered {
+    border: 1px solid var(--nord3);
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid var(--nord3);
+    padding: 6px;
+}
+
+.table-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 4px;
+}
+
+h1, h3, h4 {
+    color: var(--nord5);
+    font-weight: 500;
+}
+
+input.form-control {
+    background: var(--nord2);
+    color: var(--nord4);
+    border: 1px solid var(--nord3);
+    border-radius: 4px;
+}
+
+input.form-control::placeholder {
+    color: var(--nord5);
+    opacity: 0.7;
+}
+
+input.form-control:focus {
+    background: var(--nord2);
+    color: var(--nord4);
+    border-color: var(--nord8);
+    box-shadow: 0 0 0 0.2rem rgba(136, 192, 208, 0.25);
+}
+
+.list-group {
+    background: var(--nord1);
+    border: 1px solid var(--nord3);
+    border-radius: 4px;
+}
+
+.list-group-item {
+    background: var(--nord1);
+    color: var(--nord4);
+    border: none;
+    border-bottom: 1px solid var(--nord3);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+    background: var(--nord9);
+    color: var(--nord0);
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.card {
+    background: var(--nord1);
+    border: 1px solid var(--nord3);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-body {
+    color: var(--nord4);
+}
+
+.card-title {
+    color: var(--nord5);
+}
+
+.collapse .card {
+    background: var(--nord2);
+}
+
+.collapse .card-body {
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .table {
+        font-size: 12px;
+    }
+    
+    .table-container {
+        max-height: 150px;
+    }
+    
+    h3, h4 {
+        font-size: 1.2rem;
+    }
+    
+    .list-group {
+        font-size: 14px;
+    }
+    
+    .card {
+        font-size: 14px;
+    }
+}

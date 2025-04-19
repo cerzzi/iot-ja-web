@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Weather Dashboard</h1>
+        
+        <!-- City Search with Autocomplete -->
+        <div class="row mb-4">
+            <div class="col-md-6 mx-auto position-relative">
+                <div class="input-group">
+                    <input type="text" id="cityInput" class="form-control" placeholder="Enter city name" oninput="suggestCities()" autocomplete="off">
+                    <button class="btn btn-primary" onclick="searchCity()">Search</button>
+                </div>
+                <ul id="citySuggestions" class="list-group position-absolute w-100" style="z-index: 1000; display: none;"></ul>
+            </div>
+        </div>
+
+        <!-- Current Weather -->
+        <div id="currentWeather" class="card mb-4" style="display: none;">
+            <div class="card-body">
+                <h5 class="card-title">Current Weather in <span id="currentCity"></span></h5>
+                <div class="row">
+                    <div class="col-4">
+                        <p><strong>Temperature:</strong> <span id="currentTemp"></span></p>
+                    </div>
+                    <div class="col-4">
+                        <p><strong>Wind Speed:</strong> <span id="currentWind"></span></p>
+                    </div>
+                    <div class="col-4">
+                        <p><strong>Rain:</strong> <span id="currentRain"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <ul class="nav nav-tabs mb-4">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" onclick="switchView('temperature')">Temperature</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="switchView('rain')">Rain</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="switchView('windspeed')">Wind Speed</a>
+            </li>
+        </ul>
+
+        <!-- Weather Data Display -->
+        <div id="weatherData">
+            <h3 id="viewTitle" class="mb-3"></h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Table</h4>
+                    <div class="table-container">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Now</th>
+                                    <th>Latest 20 Readings (Avg)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="weatherTable">
+                                <tr><td>Now</td><td id="now"></td><td id="latest20"></td></tr>
+                                <tr><td>24 Hours</td><td>-</td><td id="last24"></td></tr>
+                                <tr><td>48 Hours</td><td>-</td><td id="last48"></td></tr>
+                                <tr><td>72 Hours</td><td>-</td><td id="last72"></td></tr>
+                                <tr><td>1 Week</td><td>-</td><td id="lastWeek"></td></tr>
+                                <tr><td>1 Month</td><td>-</td><td id="lastMonth"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn btn-primary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#statisticsCollapse" aria-expanded="false" aria-controls="statisticsCollapse">
+                        Show Statistics
+                    </button>
+                    <div class="collapse mt-3" id="statisticsCollapse">
+                        <div class="card card-body">
+                            <h4>Statistics</h4>
+                            <div id="statistics"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Chart</h4>
+                    <canvas id="weatherChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
